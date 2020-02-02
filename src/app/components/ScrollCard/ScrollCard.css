@@ -1,0 +1,59 @@
+.c-scroll-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  border: 2px dashed #70706F;
+}
+
+.c-scroll-card__title {
+  text-align: center;
+  border: 2px dashed #919191;
+}
+
+.c-scroll-card__body {
+  text-align: center;
+  border: 2px dashed #BABABA;
+}
+
+/* cards */
+
+.c-scroll-card:nth-child(1) {
+  transform: translateZ(-1000px);
+}
+
+.c-scroll-card:nth-child(2) {
+  transform: translateZ(-2000px);
+}
+
+.c-scroll-card:nth-child(3) {
+  transform: translateZ(-3000px);
+}
+
+.c-scroll-card:nth-child(4) {
+  transform: translateZ(-4000px);
+}
+
+.c-scroll-card:nth-child(5) {
+  transform: translateZ(-5000px);
+}
+
+.c-scroll-card:nth-child(6) {
+  transform: translateZ(-6000px);
+}
+
+.c-scroll-card:nth-child(7) {
+  transform: translateZ(-7000px);
+}
+
+.c-scroll-card:nth-child(8) {
+  transform: translateZ(-8000px);
+}
+
+.c-scroll-card:nth-child(9) {
+  transform: translateZ(-9000px);
+}
+
+.c-scroll-card:nth-child(10) {
+  transform: translateZ(-10000px);
+}
