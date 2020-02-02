@@ -40,13 +40,15 @@ const App = () => {
   if (isLoading) {
     return (
       <div className="o-app">
-        <div className="o-app__header">LOADING DATA</div> 
+        <div className="o-app__header">LOADING DATA</div>
+        <ScrollViewport />
       </div>
     );
   } else if (error) {
     return (
       <div className="o-app">
-        <div className="o-app__header">ERROR FETCHING DATA: {`${error}`}</div> 
+        <div className="o-app__header">ERROR FETCHING DATA: {`${error}`}</div>
+        <ScrollViewport />
       </div>
     );
   } else if (data) {
