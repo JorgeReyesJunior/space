@@ -10,7 +10,6 @@ import RootReducer from './app/reducers/all';
 import RootSaga from './app/sagas';
 import App from './app/components/App/App';
 import * as serviceWorker from './serviceWorker';
-import './index.css';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
