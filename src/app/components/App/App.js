@@ -40,21 +40,30 @@ const App = () => {
   if (isLoading) {
     return (
       <div className="o-app">
-        <div className="o-app__header">LOADING DATA</div>
+        <div className="o-app__header">
+          <a href="https://jorgereyesjunior.github.io/">jorgereyesjunior.github.io</a>
+          <p>LOADING DATA</p>
+        </div>
         <ScrollViewport />
       </div>
     );
   } else if (error) {
     return (
       <div className="o-app">
-        <div className="o-app__header">ERROR FETCHING DATA: {`${error}`}</div>
+        <div className="o-app__header">
+          <a href="https://jorgereyesjunior.github.io/">jorgereyesjunior.github.io</a>
+          <p>ERROR FETCHING DATA: {`${error}`}</p>
+        </div>
         <ScrollViewport />
       </div>
     );
   } else if (data) {
     return (
       <div className="o-app">
-        <div className="o-app__header">SUCCESSFULLY FETCHED DATA FROM: {`${data.url}`}</div> 
+        <div className="o-app__header">
+          <a href="https://jorgereyesjunior.github.io/">jorgereyesjunior.github.io</a>
+          <p>SUCCESSFULLY FETCHED DATA FROM: {`${data.url}`}</p>
+        </div> 
         <ScrollViewport />
       </div>
     );
