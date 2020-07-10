@@ -1,6 +1,7 @@
 import React, { useEffect }  from 'react';
 import { useDispatch, useSelector } from 'react-redux' 
 import actions from '../../actions';
+import AppBackground from './AppBackground';
 import ScrollViewport from '../ScrollViewport/ScrollViewport';
 import './App.css';
 
@@ -15,7 +16,12 @@ const App = () => {
     async function fetchData() {
       try {
         // https://swapi.dev/about
-        const url = `https://swapi.dev/api/people/1/`;
+
+        // TODO: future support for user input, allowing different url fetches. 
+        // `https://swapi.dev/api/people`
+        // `https://swapi.dev/api/starships`
+
+        const url = `https://swapi.dev/api/planets`;
         await dispatch({
           type: `${actions.AXIOS_FETCH}`,
           payload: `${url}`
@@ -41,33 +47,38 @@ const App = () => {
   if (isLoading) {
     return (
       <div className="o-app">
+        <AppBackground />
         <div className="o-app__header">
-          <a href="https://jorgereyesjunior.github.io/">jorgereyesjunior.github.io</a>
-          <p>LOADING DATA</p>
+          <a className="c-button c-button--back" href="https://jorgereyesjunior.github.io/apps">{`Back to Apps`}</a>
+          <p className="c-title">{`Loading data from: https://swapi.dev/`}</p>
         </div>
       </div>
     );
   } else if (error) {
     return (
       <div className="o-app">
+        <AppBackground />
         <div className="o-app__header">
-          <a href="https://jorgereyesjunior.github.io/">jorgereyesjunior.github.io</a>
-          <p>ERROR FETCHING DATA: {`${error}`}</p>
+          <a className="c-button c-button--back" href="https://jorgereyesjunior.github.io/apps">{`Back to Apps`}</a>
+          <p className="c-title">{`An error has occurred attempting to load data from: https://swapi.dev/`}</p>
         </div>
       </div>
     );
   } else if (data) {
+    console.log(data);
     return (
       <div className="o-app">
+        <AppBackground />
         <div className="o-app__header">
-          <a href="https://jorgereyesjunior.github.io/">jorgereyesjunior.github.io</a>
+          <a className="c-button c-button--back" href="https://jorgereyesjunior.github.io/apps">{`Back to Apps`}</a>
+          <p className="c-title">{`Data provided by: https://swapi.dev/`}</p>
         </div> 
         <ScrollViewport />
       </div>
     );
+  } else {
+    return (null);
   }
-
-  return (null);
 };
   
 
