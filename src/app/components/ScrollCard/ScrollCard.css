@@ -1,7 +1,10 @@
 .c-scroll-card {
   position: absolute;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: fit-content;
+  left: 0;
+  right: 0;
   transform-style: preserve-3d;
   border: 2px dashed #70706F;
 }
