@@ -1,5 +1,7 @@
 .o-scroll-viewport {
+  position: absolute;
   width: 100%;
   height: 100%;
-  border: 2px dashed #403E3D;
+  top: 0;
+  z-index: 3;
 }
