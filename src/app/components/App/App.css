@@ -2,11 +2,116 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+.o__app {
+  position: relative;
+}
+.o-app-background,
+.o-app-background__video,
+.o-app-background__image,
+.o-app-background__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+/* Default to hide the video on all devices */
+.o-app-background__video {
+  display: none;
+  margin: auto;
+}
+/* Default to display the image on all devices */
+.o-app-background__image {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+/* Default to show the overlay on all devices */
+.o-app-background__overlay {
+  display: block;
+  /* background: rgba(1, 1, 2, 0.25); */
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
 .o-app__header {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 15px;
   text-align: center;
+  background: black;
   z-index: 999;
+}
+.o-app__header .c-button {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #7216ff;
+  color: white;
+  border: 2px solid #7216ff;
+  text-decoration: none;
+}
+.o-app__header .c-button:hover {
+  background: #985bf7;
+  color: black;
+}
+.o-app__header .c-title {
+  padding: 5px 10px;
+  margin: 0 auto;
+}
+
+/* ==============================
+=== SMALL : 300-599px
+=*/
+/* @media (width >= 300px) {} */
+
+/* ==============================
+=== MEDIUM : 600-899px
+=*/
+@media (width >= 600px) {
+  .o-app__header {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .o-app__header .c-button {
+    position: absolute;
+  }
+}
+
+/* ==============================
+=== Large : 900-1199px
+=*/
+@media (width >= 900px) {
+  /* If screen is 900px or more, then display the video and hide the image */
+  .o-app-background__video {
+    display: block;
+  }
+  .o-app-background__image {
+    display: none
+  }   
+}
+
+/* ==============================
+=== X-Large : 1200-1499px
+=*/
+@media (width >= 1200px) {
+  .o-app-background__video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* ==============================
+=== Custom
+=*/
+@media (width >= 1920px) {
+  .o-app-background__video {
+    width: 100%;
+    height: auto;
+  }
 }
