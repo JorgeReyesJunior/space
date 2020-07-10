@@ -21,7 +21,7 @@ const App = () => {
         // `https://swapi.dev/api/people`
         // `https://swapi.dev/api/starships`
 
-        const url = `https://swapi.dev/api/planets/`;
+        const url = `https://swapi.dev/api/planets`;
         await dispatch({
           type: `${actions.AXIOS_FETCH}`,
           payload: `${url}`
