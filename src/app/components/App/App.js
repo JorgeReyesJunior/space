@@ -13,29 +13,30 @@ const App = () => {
     let useEffectAborted = false;
     
     async function fetchData() {
-      if (!useEffectAborted) {
-        try {
-          const url = `https://swapi.co/api/people/1/`;
-          await dispatch({
-            type: `${actions.AXIOS_FETCH}`,
-            payload: `${url}`
-          });
-        } catch (error) {
-          await dispatch({
-            type: `${actions.AXIOS_FETCH_FAILURE}`
-          });
-        }
+      try {
+        // https://swapi.dev/about
+        const url = `https://swapi.dev/api/people/1/`;
+        await dispatch({
+          type: `${actions.AXIOS_FETCH}`,
+          payload: `${url}`
+        });
+      } catch (error) {
+        await dispatch({
+          type: `${actions.AXIOS_FETCH_FAILURE}`
+        });
       };
     }
-
-    fetchData();
+    
+    if(!useEffectAborted && !data) {
+      fetchData();
+    }
 
     return (
       () => {
         useEffectAborted = true;
       }
     )
-  }, [dispatch]);
+  }, [data, dispatch]);
 
   if (isLoading) {
     return (
@@ -44,7 +45,6 @@ const App = () => {
           <a href="https://jorgereyesjunior.github.io/">jorgereyesjunior.github.io</a>
           <p>LOADING DATA</p>
         </div>
-        <ScrollViewport />
       </div>
     );
   } else if (error) {
@@ -54,7 +54,6 @@ const App = () => {
           <a href="https://jorgereyesjunior.github.io/">jorgereyesjunior.github.io</a>
           <p>ERROR FETCHING DATA: {`${error}`}</p>
         </div>
-        <ScrollViewport />
       </div>
     );
   } else if (data) {
@@ -62,7 +61,6 @@ const App = () => {
       <div className="o-app">
         <div className="o-app__header">
           <a href="https://jorgereyesjunior.github.io/">jorgereyesjunior.github.io</a>
-          <p>SUCCESSFULLY FETCHED DATA FROM: {`${data.url}`}</p>
         </div> 
         <ScrollViewport />
       </div>
