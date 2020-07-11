@@ -3,9 +3,13 @@ import './ScrollCard.css';
 
 const ScrollCard = (props) => {
   return (
-    <div className="c-scroll-card">
-      <h2 className="c-scroll-card__title">Card: {props.cardOrder}</h2>
-      <p className="c-scroll-card__body">Content</p>
+    <div className={`c-scroll-card c-scroll-card--${props.card.name}`}>
+      {/* <h2 className="c-scroll-card__title">{props.card.name}</h2> */}
+      <div className="c-scroll-card__body">
+        <ul className="c-list">
+          <li className="c-list__item">{props.card.name}</li>
+        </ul>
+      </div>
     </div>
   );
 };
