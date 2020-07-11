@@ -72,6 +72,7 @@ const App = () => {
         <div className="o-app__header">
           <a className="c-button c-button--back" href="https://jorgereyesjunior.github.io/apps">{`Back to Apps`}</a>
           <p className="c-title">{`Data provided by: https://swapi.dev/`}</p>
+          <p className="c-prompt">Scroll to see more</p>
         </div> 
         <ScrollViewport />
       </div>
