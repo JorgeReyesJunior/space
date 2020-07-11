@@ -65,6 +65,20 @@
   margin: 0 auto;
   color: white;
 }
+.o-app__header .c-prompt {
+  padding: 5px 23px;
+  background: #7216ff;
+  border: 2px solid #7216ff;
+  position: absolute;
+  top: 225px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  color: white;
+  border-radius: 4px;
+}
 
 /* ==============================
 === SMALL : 300-599px
