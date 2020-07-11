@@ -1,62 +1,103 @@
 .c-scroll-card {
   position: absolute;
-  width: 100%;
-  /* height: 100%; */
-  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center; 
+  justify-content: center;
+  width: 75%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  /* height: fit-content; */
   left: 0;
   right: 0;
   transform-style: preserve-3d;
-  border: 2px dashed #70706F;
+  border-radius: 100%;
+  /* border: 2px dashed #70706F; */
 }
 
 .c-scroll-card__title {
+  width: 100;
+  padding: 15px;
+  color: white;
   text-align: center;
-  border: 2px dashed #919191;
+  /* border: 2px dashed #919191; */
 }
 
 .c-scroll-card__body {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  color: white;
+  /* to adjust for title */
+  height: 94%;
+  /* height: 100%; */
+  width: 100%;
   text-align: center;
-  border: 2px dashed #BABABA;
+  background: black;
+  border-radius: 100%;
+  border: 2px dashed #7216ff;
+}
+
+.c-scroll-card__body .c-list {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
 /* cards */
 
 .c-scroll-card:nth-child(1) {
-  transform: translateZ(-1000px);
+  /* background: black; */
+  transform: translateX(0) translateY(0) translateZ(-1000px);
 }
 
 .c-scroll-card:nth-child(2) {
-  transform: translateZ(-2000px);
+  /* background: black; */
+  transform: translateX(18%) translateY(5%) translateZ(-2000px);
 }
 
 .c-scroll-card:nth-child(3) {
-  transform: translateZ(-3000px);
+  /* background: black; */
+  transform: translateX(40%) translateY(-35%) translateZ(-3000px);;
 }
 
 .c-scroll-card:nth-child(4) {
-  transform: translateZ(-4000px);
+  /* background: black; */
+  transform: translateX(-5%) translateY(55%) translateZ(-4000px);
 }
 
 .c-scroll-card:nth-child(5) {
-  transform: translateZ(-5000px);
+  /* background: black; */
+  transform: translateX(-45%) translateY(-5%) translateZ(-5000px);
 }
 
 .c-scroll-card:nth-child(6) {
-  transform: translateZ(-6000px);
+  /* background: black; */
+  transform: translateX(-50%) translateY(-50%) translateZ(-6000px);
 }
 
 .c-scroll-card:nth-child(7) {
-  transform: translateZ(-7000px);
+  /* background: black; */
+  transform: translateX(-45%) translateY(-5%) translateZ(-7000px);
 }
 
 .c-scroll-card:nth-child(8) {
-  transform: translateZ(-8000px);
+  /* background: black; */
+  transform: translateX(40%) translateY(-35%) translateZ(-8000px);
 }
 
 .c-scroll-card:nth-child(9) {
-  transform: translateZ(-9000px);
+  /* background: black; */
+  transform: translateX(-35%) translateY(15%) translateZ(-9000px);
 }
 
 .c-scroll-card:nth-child(10) {
-  transform: translateZ(-10000px);
+  /* background: black; */
+  transform: translateX(18%) translateY(5%) translateZ(-10000px);
 }
