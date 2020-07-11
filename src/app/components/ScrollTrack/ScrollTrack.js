@@ -13,7 +13,7 @@ const ScrollTrack = () => {
   const transformZValue = stylesReducer.transformZValue;
 
   const scrollTrackStyles = {
-    transform: `translateZ(${transformZ}px)`
+    transform: `translateX(0px) translateY(0px) translateZ(${transformZ}px)`
   }
 
   useEffect(() => {
