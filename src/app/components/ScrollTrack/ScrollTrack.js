@@ -34,7 +34,7 @@ const ScrollTrack = () => {
     let useEffectAborted = false;
 
     if(!useEffectAborted && !cards) {
-      let cards = axiosReducer.data.results;
+      let cards = axiosReducer.data;
 
       setCards(cards);
     }
