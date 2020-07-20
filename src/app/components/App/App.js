@@ -64,7 +64,7 @@ const App = () => {
       <div className="o-app">
         <AppBackground />
         <div className="o-app__header">
-          <a className="c-button c-button--back" href="https://jorgereyesjunior.github.io/apps">{`Back to Apps`}</a>
+          <a className="c-button c-button--back" href="https://jorgeareyesjr.github.io/apps">{`Back to Apps`}</a>
           <p className="c-title">{`Loading data from: https://swapi.dev/`}</p>
         </div>
       </div>
@@ -74,7 +74,7 @@ const App = () => {
       <div className="o-app">
         <AppBackground />
         <div className="o-app__header">
-          <a className="c-button c-button--back" href="https://jorgereyesjunior.github.io/apps">{`Back to Apps`}</a>
+          <a className="c-button c-button--back" href="https://jorgeareyesjr.github.io/apps">{`Back to Apps`}</a>
           <p className="c-title">{`An error has occurred attempting to load data from: https://swapi.dev/`}</p>
           <p className="c-title--error">{`Using local data.`}</p>
         </div>
@@ -85,7 +85,7 @@ const App = () => {
       <div className="o-app">
         <AppBackground />
         <div className="o-app__header">
-          <a className="c-button c-button--back" href="https://jorgereyesjunior.github.io/apps">{`Back to Apps`}</a>
+          <a className="c-button c-button--back" href="https://jorgeareyesjr.github.io/apps">{`Back to Apps`}</a>
           <p className="c-title">{`Original data provided by: https://swapi.dev/`}</p>
           <p className="c-prompt">Scroll to see more</p>
         </div> 
